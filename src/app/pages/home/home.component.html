@@ -25,7 +25,7 @@
                         <th>Cidade</th>
                         <th>Rua</th>
                         <th>Estado</th>
-                        <th>Copy</th>
+                        <th class="th-operacao">Copy</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,7 +35,7 @@
                         <td>{{item.localidade}}</td>
                         <td>{{item.logradouro}}</td>
                         <td>{{item.uf}}</td>
-                        <td><button [ngxClipboard] ="inputTarget">Copiar</button></td>
+                        <td class="td-operacao"><button class="btn-copy" [ngxClipboard] ="inputTarget">Copiar</button></td>
                     </tr>
                 </tbody>
             </table>
