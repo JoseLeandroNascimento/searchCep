@@ -1,0 +1,7 @@
+
+<label [htmlFor]="id" translate="no">
+    {{label}}
+    <select [(ngModel)]="opcaoSelected" [name]="label" [id]="id" (change)="selected()" [disabled]="opcoes.length == 0">
+        <option *ngFor="let opc of opcoes" [ngValue]="opc">{{opc.title}}</option>
+    </select>
+</label>

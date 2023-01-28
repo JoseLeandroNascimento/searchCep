@@ -1,0 +1,25 @@
+
+<div class="container">
+    <app-select 
+    [opcoes]="opcEstados" 
+    label="Estados" 
+    [id]="'estados-brasileiros'"
+    (handleSelect)="selectEstado($event)"
+    ></app-select>
+    
+    <app-select 
+    [opcoes]="opcMunicipios" 
+    label="Municipio" 
+    [id]="'municipio-brasileiros'"
+    (handleSelect)="selectMunicio($event)"
+    ></app-select>
+    
+    <text 
+        [id]="'logradouro'"
+        [label]="'Logradouro'"
+        [disabled]="estado.length==0 || municipio.length==0"
+        (handleInput)="inputLogradouro($event)"
+    ></text>
+    
+    <button class="btn" translate="no" (click)="search()">Search CEP</button>
+</div>
