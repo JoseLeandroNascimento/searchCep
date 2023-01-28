@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
   public municipio: string = '';
   public logradouro:string = '';
 
+  public ceps: Array<any> = [];
+
   constructor(
     private localidadeService: LocalidadesService
   ) { }
@@ -68,7 +70,8 @@ export class HomeComponent implements OnInit {
 
       this.localidadeService.getCEP(this.estado,this.municipio,this.logradouro).subscribe({
         next:(ceps:Array<any>)=>{
-          console.log(ceps);
+         
+          this.ceps = ceps;
           
         }
       })
